@@ -1,0 +1,25 @@
+{
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "IDFfile": "https://github.com/syafiqsaiful/FAIR_DATA/blob/main/1ZoneUncontrolled.idf",
+  "Weatherfile": "https://github.com/syafiqsaiful/FAIR_DATA/blob/main/USA_CA_San.Francisco.Intl.AP.724940_TMY3.epw"
+  "tables": [{
+    "url": "https://github.com/syafiqsaiful/FAIR_DATA/blob/main/eplusout.csv",
+    "tableSchema": {
+      "columns": [
+       {
+        "name": "Environment:Site Outdoor Air Drybulb Temperature [C](Hourly)",
+        "datatype": "decimal",
+        "dataunit": "DEG_C"
+        "location": "Loughborough, United Kingdom,
+        "
+        "sourceURL": "https://energyplus.net/weather"
+        },
+       { 
+         "name": "ZONE ONE:Zone Mean Air Temperature [C](Hourly)", 
+         "datatype": "decimal" 
+         "dataunit": "DEG_C"
+         "location": "Office Room RT.216, Level 2, Sir Frank Gibb Building, Loughborough, LE11 2UE, United Kingdom"
+       }
+    ]
+  }
+}
