@@ -6,3 +6,5 @@ This is a walktrough of the method used to convert the '**eplusout.csv**' CSV fi
 
 # Method to analyse dataset
 The following Python script can be used to carry out a simple analysis of the '**eplusout.csv**'.
+![image](https://user-images.githubusercontent.com/77445492/172009503-26e20076-f8e3-443f-849f-8d6c676f4b79.png)
+
