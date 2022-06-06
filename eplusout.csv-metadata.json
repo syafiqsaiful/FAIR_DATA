@@ -1,0 +1,90 @@
+{
+  "@context": "http://www.w3.org/ns/csvw", {"@language": "en"},
+  "schema:title": "EnergyPlus simulation test",
+  "schema:description": "An EnergyPlus simulation of an office room in Sir Frank Gibb building, Loughborough University",
+  "schema:creator": {
+      "schema:name": "ABCE Open Research Team",
+      "schema:url" : "https://www.lboro.ac.uk/departments/abce/",
+      "@type": "schema:EducationalOrganization"}   
+  "schema:type": "Building simulation results",
+  "tables": [{
+    "url": "eplusout.csv",
+    "tableSchema": {
+      "columns": [
+       {
+        "name": "Date/Time",
+        "description": "Date and time at hourly intervals",
+        "target": "eplusout.csv#cell=1,2-*,8809",
+        "datatype": {
+          "base": "date",
+          "format": "MM-dd HH:mm:ss"
+            },
+       {
+        "name": "Environment:Site Outdoor Air Drybulb Temperature [C](Hourly)",
+        "description": "This is the outdoor dry-bulb temperature in degrees C.",
+        "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-location-climate-weather-file-access.html#site-outdoor-air-drybulb-temperature-c",
+        "datatype": "decimal",
+        "dataunit": "DEG_C",
+        "dataunitURI": "http://qudt.org/vocab/unit/DEG_C",
+        "target": "eplusout.csv#cell=2,2-*,8809"
+        "location": "Loughborough, United Kingdom",
+        },
+       {
+        "name": "Environment:Site Total Sky Cover [](Hourly)",
+        "description": "This is the total sky cover in tenths of sky. The value ranges from 0 (clear) to 10 (full cover).", 
+        "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-location-climate-weather-file-access.html#site-total-sky-cover",
+        "datatype": "decimal",
+        "dataunit": "fraction",
+        "dataunitURI": "http://qudt.org/vocab/unit/FRACTION",
+        "target": "eplusout.csv#cell=3,2-*,8809"
+        },
+       {
+        "name": "Environment:Site Opaque Sky Cover [](Hourly)",
+        "description": "This is the opaque sky cover in tenths of sky. The value ranges from 0 (clear) to 10 (full cover)", 
+        "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-location-climate-weather-file-access.html#site-opaque-sky-cover",
+        "datatype": "decimal",
+        "dataunit": "fraction",
+        "dataunitURI": "http://qudt.org/vocab/unit/FRACTION",
+        "target": "eplusout.csv#cell=4,2-*,8809"
+        },
+       {
+        "name": "ZONE ONE:Zone Mean Radiant Temperature [C](Hourly)",
+        "description": "The Mean Radiant Temperature (MRT) in degrees Celsius of a space is really the measure of the combined effects of temperatures of surfaces within that space. The larger the surface area and the closer one is to it, the more effect the surface temperature of that surface has on each other. The MRT is the measure of all these surface areas and temperatures.",
+        "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-mean-radiant-temperature-c-1",
+        "datatype": "decimal",
+        "dataunit": "DEG_C",
+        "dataunitURI": "http://qudt.org/vocab/unit/DEG_C",
+        "location": "Office Room RT.216, Level 2, Sir Frank Gibb Building, Loughborough, LE11 2UE, United Kingdom",
+        "target": "eplusout.csv#cell=11,2-*,8809"
+        },
+       { 
+         "name": "ZONE ONE:Zone Mean Air Temperature [C](Hourly)", 
+         "description": "From the code definition, the zone mean air temperature is the average temperature of the air temperatures at the system timestep. Remember that the zone heat balance represents a “well stirred” model for a zone, therefore there is only one mean air temperature to represent the air temperature for the zone.",
+         "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-mean-air-temperature-c-1",
+         "datatype": "decimal",
+         "dataunit": "DEG_C",
+         "dataunitURI": "http://qudt.org/vocab/unit/DEG_C",
+         "location": "Office Room RT.216, Level 2, Sir Frank Gibb Building, Loughborough, LE11 2UE, United Kingdom",
+         "target": "eplusout.csv#cell=35,2-*,8809"
+       },
+      {
+         "name": "ZONE ONE:Zone Air Heat Balance Surface Convection Rate [W](Hourly)",
+         "description": "The Zone Air Heat Balance Surface Convection Rate is the sum, in watts, of heat transferred to the zone air from all the surfaces. This field is not multiplied by zone or group multipliers.",
+         "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-air-heat-balance-surface-convection-rate-w",
+         "datatype": "decimal",
+         "dataunit": "W",
+         "dataunitURI": "http://qudt.org/vocab/unit/W",
+         "location": "Office Room RT.216, Level 2, Sir Frank Gibb Building, Loughborough, LE11 2UE, United Kingdom",
+         "target": "eplusout.csv#cell=36,2-*,8809"
+       },
+      {
+         "name": "ZONE ONE:Zone Air Heat Balance Air Energy Storage Rate [W](Hourly) ", 
+         "description": "The Zone Air Heat Balance Air Energy Storage Rate is the heat stored, in watts, in the zone air as result of zone air temperature changing from one timestep to the next. This field is not multiplied by zone or group multipliers.",
+         "descriptionUrl": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-air-heat-balance-air-energy-storage-rate-w",
+         "dataunit": "W",
+         "dataunitURI": "http://qudt.org/vocab/unit/W",
+         "location": "Office Room RT.216, Level 2, Sir Frank Gibb Building, Loughborough, LE11 2UE, United Kingdom",
+         "target": "eplusout.csv#cell=37,2-*,8809"
+    }]
+  }
+}
