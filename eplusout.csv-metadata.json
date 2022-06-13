@@ -1,0 +1,99 @@
+{
+  "@context": "http://www.w3.org/ns/csvw", {"@language": "en"},
+  "url": "eplusout.csv",
+  "dc:title": "EnergyPlus simulation test",
+  "dc:description": "An EnergyPlus simulation of an office room in Sir Frank Gibb building, Loughborough University",
+  "dc:creator": "ABCE Open Research Team https://www.lboro.ac.uk/departments/abce/",   
+   "tableSchema": {
+      "columns": [
+       {
+        "titles": "Date/Time",
+        "dc:description": "Date and time at hourly intervals",
+        "datatype": {
+          "base": "string", 
+          "format": "MM-dd HH:mm:ss"
+        },
+        "@type": "Column"
+       },
+       {
+        "titles": "Environment:Site Outdoor Air Drybulb Temperature [C](Hourly)",
+        "dc:description": "This is the outdoor dry-bulb temperature in degrees C.", 
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-location-climate-weather-file-access.html#site-outdoor-air-drybulb-temperature-c"
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/DEG_C>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+       },
+       {
+        "titles": "Environment:Site Total Sky Cover [](Hourly)",
+        "dc:description": "This is the total sky cover in tenths of sky. The value ranges from 0 (clear) to 10 (full cover).", {
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-location-climate-weather-file-access.html#site-total-sky-cover" 
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/FRACTION>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+       },
+       {
+        "titles": "Environment:Site Opaque Sky Cover [](Hourly)",
+        "dc:description": "This is the opaque sky cover in tenths of sky. The value ranges from 0 (clear) to 10 (full cover)", {
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-location-climate-weather-file-access.html#site-opaque-sky-cover"
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/FRACTION>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+       },
+       {
+        "titles": "ZONE ONE:Zone Mean Radiant Temperature [C](Hourly)",
+        "dc:description": "The Mean Radiant Temperature (MRT) in degrees Celsius of a space is really the measure of the combined effects of temperatures of surfaces within that space. The larger the surface area and the closer one is to it, the more effect the surface temperature of that surface has on each other. The MRT is the measure of all these surface areas and temperatures.", {
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-mean-radiant-temperature-c-1"
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/DEG_C>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+       },
+       {
+         "titles": "ZONE ONE:Zone Mean Air Temperature [C](Hourly)", 
+         "dc:description": "From the code definition, the zone mean air temperature is the average temperature of the air temperatures at the system timestep. Remember that the zone heat balance represents a “well stirred” model for a zone, therefore there is only one mean air temperature to represent the air temperature for the zone.", {
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-mean-air-temperature-c-1"
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/DEG_C>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+       },
+       {
+         "titles": "ZONE ONE:Zone Air Heat Balance Surface Convection Rate [W](Hourly)",
+         "dc:description": "The Zone Air Heat Balance Surface Convection Rate is the sum, in watts, of heat transferred to the zone air from all the surfaces. This field is not multiplied by zone or group multipliers.", {
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-air-heat-balance-surface-convection-rate-w"
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/W-PER-M>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+       },
+       {
+         "titles": "ZONE ONE:Zone Air Heat Balance Air Energy Storage Rate [W](Hourly) ", 
+         "dc:description": "The Zone Air Heat Balance Air Energy Storage Rate is the heat stored, in watts, in the zone air as result of zone air temperature changing from one timestep to the next. This field is not multiplied by zone or group multipliers.", {
+           "@id": "https://bigladdersoftware.com/epx/docs/9-6/input-output-reference/group-thermal-zone-description-geometry.html#zone-air-heat-balance-air-energy-storage-rate-w"
+       },
+        "<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure>": {
+        "@id": "<http://qudt.org/vocab/unit/W>"
+        },
+        "datatype": "number",
+        "@type": "Column"
+        }
+      ],
+      "@type": "Schema"
+    },
+    "@type": "Table"
+  }
